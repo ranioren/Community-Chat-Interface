@@ -52,3 +52,23 @@ app = rx.App(
     ],
 )
 app.add_page(index, route="/")
+from app.pages.dashboard import dashboard_page
+from app.pages.courses import courses_page
+from app.pages.settings import settings_page
+from app.states.dashboard_state import DashboardState
+
+app.add_page(
+    dashboard_page,
+    route="/dashboard",
+    on_load=lambda: DashboardState.set_active_section("Dashboard"),
+)
+app.add_page(
+    courses_page,
+    route="/courses",
+    on_load=lambda: DashboardState.set_active_section("Your Courses"),
+)
+app.add_page(
+    settings_page,
+    route="/settings",
+    on_load=lambda: DashboardState.set_active_section("Settings"),
+)

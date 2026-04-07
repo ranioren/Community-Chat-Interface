@@ -25,6 +25,8 @@ def message_bubble(message: dict) -> rx.Component:
 
 
 def google_login_button() -> rx.Component:
+    from app.states.dashboard_state import DashboardState
+
     return rx.el.button(
         rx.el.div(
             rx.el.div(
@@ -56,6 +58,7 @@ def google_login_button() -> rx.Component:
             ),
             class_name="flex items-center",
         ),
+        on_click=lambda: DashboardState.navigate_to("Dashboard"),
         class_name="bg-blue-600 hover:bg-blue-700 transition-all duration-200 px-4 py-2 rounded-xl flex items-center mx-auto mb-10 shadow-md hover:shadow-lg hover:-translate-y-0.5",
     )
 
