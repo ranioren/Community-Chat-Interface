@@ -49,7 +49,7 @@ def feature_grid() -> rx.Component:
         ),
         feature_card(
             "Add to Discord Server",
-            "Join our vibrant learning community",
+            "Start educating your community & Monetize your knowledge",
             None,
             "bg-orange-500",
             image_src="/discord_logo_classic.png",
