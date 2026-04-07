@@ -17,7 +17,7 @@ def feature_card(
                 ),
                 rx.cond(
                     image_src,
-                    rx.image(src=image_src, class_name="size-6 object-contain"),
+                    rx.image(src=image_src, class_name="size-8 object-contain"),
                     rx.icon(
                         icon_name if icon_name else "help-circle",
                         class_name="h-6 w-6 text-gray-600",
