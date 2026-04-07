@@ -13,7 +13,11 @@ def index() -> rx.Component:
                 ),
                 rx.el.h2(
                     "#CommunityLearning",
-                    class_name="text-xl md:text-2xl font-bold text-blue-600/80 mb-12",
+                    class_name="text-xl md:text-2xl font-bold text-gray-900 mb-4",
+                ),
+                rx.el.p(
+                    "Educate your community, Share your knowledge & experience, Monetize from what you built!",
+                    class_name="text-base font-medium text-gray-500 max-w-[80%] mx-auto mb-12",
                 ),
                 class_name="text-center w-full pt-12",
             ),
